@@ -101,6 +101,7 @@ function UWindowList Sort()
 	
 	for (Temp = self; Temp.Next != None; Temp = Temp.Next)
 		Temp.Next.Prev = Temp;
+	Last = Temp;
 
 	//Validate();
 	return Self;
