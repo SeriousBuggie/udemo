@@ -814,7 +814,6 @@ INT UuDemoPackageMap::LookupDemoGeneration(FPackageInfo& PackageInfo)
 	// UnrealShare
 	if (PackageInfo.Guid == FGuid(0x4770b88c, 0x11d38e3e, 0x100067b9, 0xf6f8975a))
 		return 1;
-
 	// De
 	if (PackageInfo.Guid == FGuid(0xfb1eb231, 0x4d8bf569, 0xae12c6bf, 0x1a08a2f7))
 		return 1;
@@ -830,7 +829,6 @@ INT UuDemoPackageMap::LookupDemoGeneration(FPackageInfo& PackageInfo)
 	// relicsbindings
 	if (PackageInfo.Guid == FGuid(0x465ad1fe, 0x11d3df5c, 0x1000cdb9, 0xf6f8975a))
 		return 2;
-
 	return PackageInfo.RemoteGeneration;
 }
 
