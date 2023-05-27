@@ -46,7 +46,7 @@ native final function float GetStartTime(); //returns the time demo was at when 
 //non-native functions:
 function GotoFrame (float Time)
 {
-    local float cur, OldTimeDilation;
+    local float cur;
 
     if (Time > GetTotalTime() || Time < GetStartTime())  //invalid
         return;
@@ -57,8 +57,7 @@ function GotoFrame (float Time)
         return;
 
     DemoPlaybackSpec(DemoSpec).bSeeking=true;
-	OldTimeDilation = DemoSpec.Level.TimeDilation;
-	
+
     if (Time > cur && Time < cur + fmax(2*class'DemoSettings'.default.CacheSeconds,5.0))
         ReadCache (Time+GetStartTime(),class'demosettings'.default.TickSize); //more reliable to keep reading w/ cache
     else
@@ -78,7 +77,6 @@ function GotoFrame (float Time)
         ReadCache(Time,class'DemoSettings'.default.TickSize); //now do caching
    }
 
-	DemoSpec.Level.TimeDilation = OldTimeDilation;
    DemoPlaybackSpec(DemoSpec).bSeeking=false;
 }
 
