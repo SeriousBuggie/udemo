@@ -1282,10 +1282,8 @@ event PostRender( canvas Canvas )
 		
 		PlayerLinked.ViewTarget = OldViewTarget;
 		
-		PlayerLinked.Player = None;   //UNCONSTED.. CANNOT COMPILE THIS CODE WITHOUT BYTEHACKING ENGINE.U!!!
-	}
-	if (PlayerLinked != None)
 		PlayerLinked.Player = StubPlayer;   //UNCONSTED.. CANNOT COMPILE THIS CODE WITHOUT BYTEHACKING ENGINE.U!!!
+	}
 }
 
 // native call, maintain correct Z-offset
