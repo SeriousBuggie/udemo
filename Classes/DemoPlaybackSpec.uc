@@ -1377,6 +1377,7 @@ event UpdateEyeHeight(float DeltaTime)
 	local PlayerPawn PP;
 	local bool bKeepZoom, bOldIsWalking;
 	local ENetRole OldRole;
+	local string str;
 
 	Super.UpdateEyeHeight(DeltaTime);
 
@@ -1387,6 +1388,13 @@ event UpdateEyeHeight(float DeltaTime)
 		if (Level.Pauser == "") {
 			//PP.EyeHeight = oldEyeH;
 			PP.ViewShake(DeltaTime);
+			// hack for fix broken NewNet rotation
+			if (PP.IsA('bbPlayer'))
+			{
+				str = PP.GetPropertyText("zzViewRotation");
+				if (str != "")
+					PP.SetPropertyText("ViewRotation", str);
+			}
 			PP.ShakeVert = 0; // used replicated EyeHeight
 			//PP.UpdateEyeHeight(DeltaTime);
 			if (PP == ViewTarget && PP.Base != None && (PP.Mesh == None || PP.GetAnimGroup(PP.AnimSequence) != 'Dodge')) {
