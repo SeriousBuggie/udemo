@@ -573,6 +573,38 @@
     <ClInclude Include="inc\udemoprivate.h" />
     <ClInclude Include="inc\UuDriver.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Classes\AutoRecorder.uc" />
+    <None Include="Classes\DemoGrid.uc" />
+    <None Include="Classes\DemoInterface.uc" />
+    <None Include="Classes\DemoList.uc" />
+    <None Include="Classes\DemoMainClientWindow.uc" />
+    <None Include="Classes\DemoNotify.uc" />
+    <None Include="Classes\DemoPlaybackSpec.uc" />
+    <None Include="Classes\DemoReader.uc" />
+    <None Include="Classes\DemoSettings.uc" />
+    <None Include="Classes\DownloadClient.uc" />
+    <None Include="Classes\DownloadFramedWindow.uc" />
+    <None Include="Classes\InterceptHUD.uc" />
+    <None Include="Classes\OldSkoolHack.uc" />
+    <None Include="Classes\PackageBasicInfoCW.uc" />
+    <None Include="Classes\UDClientWindow.uc" />
+    <None Include="Classes\UDComboList.uc" />
+    <None Include="Classes\UDComboListItem.uc" />
+    <None Include="Classes\UDemoScreenshotCW.uc" />
+    <None Include="Classes\UDFeaturesClient.uc" />
+    <None Include="Classes\UDframedwindow.uc" />
+    <None Include="Classes\UDmoditem.uc" />
+    <None Include="Classes\UDnameclient.uc" />
+    <None Include="Classes\UDnamewindow.uc" />
+    <None Include="Classes\udnative.uc" />
+    <None Include="Classes\UDNetSettingsClient.uc" />
+    <None Include="Classes\UDPathsclient.uc" />
+    <None Include="Classes\UDPlaybackSettingsClient.uc" />
+    <None Include="Classes\UDPlayerInfo.uc" />
+    <None Include="Classes\UZDownloader.uc" />
+    <None Include="Classes\UZHandler.uc" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
